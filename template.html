@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PDF Template</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <style>
+    html {
+      background: #42275a;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #734b6d, #42275a);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #734b6d, #42275a);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <div class="row valign-wrapper">
+          <div class="col s2">
+            <img src="https://res.cloudinary.com/drv584gsz/image/upload/v1564098856/avatars/woman_vn0fzi.png"
+              class="circle responsive-img">
+          </div>
+          <div class="col s10">
+            <span class="black-text">
+              This is a example with Node, creating pdf files.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="card">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each products}}
+        <tr>
+          <td>{{name}}</td>
+          <td>$ {{price}}</td>
+        </tr>
+        {{/each}}
+        <tr class="total">
+          <td>Total: $ {{total}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+
+</html>
